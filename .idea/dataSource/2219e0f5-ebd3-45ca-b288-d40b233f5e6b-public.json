@@ -1,0 +1,7 @@
+{
+  "name" : "public",
+  "TABLES" : [ ],
+  "SEQUENCES" : [ ],
+  "VIEWS" : [ ],
+  "FUNCTIONS" : [ ]
+}

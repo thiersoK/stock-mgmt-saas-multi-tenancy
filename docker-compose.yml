@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:17.5
+    container_name: saas-db
+    environment:
+      POSTGRES_DB: ${DB_NAME:-saas-app-db}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      # Correction ici : Le nom de la variable est PGDATA
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      # Correction ici : On aligne le volume sur PGDATA
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - saas-app-network
+    restart: unless-stopped
+    # Optionnel mais recommandé : vérifie que la DB est prête
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-saas-app-db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  adminer:
+    image: adminer
+    container_name: saas_adminer
+    restart: always
+    ports:
+      - "8085:8080"
+    depends_on:
+      - postgres
+    networks:
+      - saas-app-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  saas-app-network:
+    driver: bridge

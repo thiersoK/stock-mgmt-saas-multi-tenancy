@@ -1,0 +1,432 @@
+{
+  "name" : "information_schema",
+  "SEQUENCES" : [ ],
+  "TABLES" : [ {
+    "TABLE_NAME" : "sql_features",
+    "IS_TEMPORARY" : "N"
+  }, {
+    "TABLE_NAME" : "sql_implementation_info",
+    "IS_TEMPORARY" : "N"
+  }, {
+    "TABLE_NAME" : "sql_parts",
+    "IS_TEMPORARY" : "N"
+  }, {
+    "TABLE_NAME" : "sql_sizing",
+    "IS_TEMPORARY" : "N"
+  } ],
+  "VIEWS" : [ {
+    "VIEW_NAME" : "_pg_foreign_data_wrappers",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "_pg_foreign_servers",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "_pg_foreign_table_columns",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "_pg_foreign_tables",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "_pg_user_mappings",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "administrable_role_authorizations",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "applicable_roles",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "attributes",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "character_sets",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "check_constraint_routine_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "check_constraints",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "collation_character_set_applicability",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "collations",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "column_column_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "column_domain_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "column_options",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "column_privileges",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "column_udt_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "columns",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "constraint_column_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "constraint_table_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "data_type_privileges",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "domain_constraints",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "domain_udt_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "domains",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "element_types",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "enabled_roles",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "foreign_data_wrapper_options",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "foreign_data_wrappers",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "foreign_server_options",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "foreign_servers",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "foreign_table_options",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "foreign_tables",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "information_schema_catalog_name",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "key_column_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "parameters",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "referential_constraints",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "role_column_grants",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "role_routine_grants",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "role_table_grants",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "role_udt_grants",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "role_usage_grants",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "routine_column_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "routine_privileges",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "routine_routine_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "routine_sequence_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "routine_table_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "routines",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "schemata",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "sequences",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "table_constraints",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "table_privileges",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "tables",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "transforms",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "triggered_update_columns",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "triggers",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "udt_privileges",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "usage_privileges",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "user_defined_types",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "user_mapping_options",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "user_mappings",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "view_column_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "view_routine_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "view_table_usage",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  }, {
+    "VIEW_NAME" : "views",
+    "VIEW_TYPE_OWNER" : null,
+    "VIEW_TYPE" : null,
+    "IS_SYSTEM_VIEW" : "N"
+  } ],
+  "FUNCTIONS" : [ {
+    "FUNCTION_NAME" : "_pg_char_max_length",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_char_octet_length",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_datetime_precision",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_expandarray",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_index_position",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "N",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_interval_type",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_numeric_precision",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_numeric_precision_radix",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_numeric_scale",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_truetypid",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  }, {
+    "FUNCTION_NAME" : "_pg_truetypmod",
+    "OVERLOAD" : 0,
+    "POSITION" : 0,
+    "IS_VALID" : "Y",
+    "IS_DEBUG" : "N",
+    "IS_DETERMINISTIC" : "Y",
+    "LANGUAGE" : "SQL"
+  } ]
+}

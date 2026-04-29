@@ -1,0 +1,61 @@
+# Section : Identification et Environnement
+
+spring:
+  application:
+    name: sass-app # Nom de ton projet (utile pour les logs et si tu utilises des microservices)
+  config:
+    import: optional:file:.env[.properties] # Importe les variables d'un fichier .env (pour ne pas écrire tes mots de passe en clair ici)
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev} # Définit le profil actif. Utilise 'dev' par défaut si aucune variable n'est trouvée.
+
+  #Section : Connexion à la Base de Données (Datasource)
+
+  #DATABASE CONFIGURATION
+  datasource:
+    # URL de connexion : construit dynamiquement. Si les variables manquent, il utilise 'localhost:5432/saas-app-db'
+    url: ${DB_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:saas-app-db}}
+    username: ${DB_USERNAME:postgres} # Nom d'utilisateur de la base (défaut: postgres)
+    password: ${DB_PASSWORD:postgres} # Mot de passe de la base (défaut: postgres)
+    driver-class-name: org.postgresql.Driver # Indique quel driver Java utiliser pour parler à PostgreSQL
+
+    # Hikari : Le gestionnaire de pool de connexions (pour ne pas ouvrir/fermer la DB sans arrêt)
+    hikari:
+      maximum-pool-size: 10 # Maximum 10 connexions ouvertes simultanément
+      minimum-idle: 5 # Garde toujours au moins 5 connexions prêtes, même si personne ne les utilise
+      connection-timeout: 20000 # Temps max (20s) pour attendre une connexion libre avant de renvoyer une erreur
+      idle-timeout: 30000 # Une connexion inutilisée est fermée après 30s
+      max-lifetime: 120000 # Une connexion est obligatoirement renouvelée après 2 minutes
+
+  #Section : JPA et Hibernate (Le moteur SQL)
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      #ddl-auto: update # Hibernate vérifie si tes classes Java correspondent aux tables et crée/modifie les colonnes si besoin
+    properties:
+      hibernate:
+        format_sql: true # Affiche le code SQL de manière lisible (avec des retours à la ligne) dans la console
+        use_sql_comments: true # Ajoute des commentaires explicatifs dans les requêtes SQL envoyées à la base
+        jdbc:
+          batch_size: 20 # Envoie les requêtes par paquets de 20 (beaucoup plus rapide pour les gros imports de produits)
+          order_inserts: true # Optimise l'ordre des créations pour le batching
+          order_update: true # Optimise l'ordre des mises à jour pour le batching
+          multi_tenancy: SCHEMA # Prépare ton application pour le multi-tenant (un schéma par client), à activer plus tard
+    show_sql: true # Affiche toutes les requêtes SQL générées dans tes logs IntelliJ
+    open-in-view: false # Ferme la session DB dès que le Controller a fini. Indispensable pour éviter les fuites de mémoire (Memory Leaks).
+
+  #Section : Flyway (Gestionnaire de migrations)
+
+  flyway:
+    enabled: true # Active Flyway au démarrage
+    baseLine-on-migrate: true # Si la base existe déjà sans Flyway, il crée une base de référence pour commencer proprement
+    location: # Où Flyway doit chercher tes scripts SQL (V1, V2, etc.)
+      - classpath:db/migration/common # Scripts communs à tous les clients
+      - classpath:db/migration/tenant # Scripts spécifiques aux schémas clients
+    schema: public # Nom du schéma où Flyway va travailler
+    table: flyway_schema_history # Nom de la table qui enregistre quelles migrations ont déjà été exécutées
+    validate-on-migrate: true # Vérifie que tes fichiers SQL n'ont pas été modifiés depuis leur exécution
+
+# SERVER CONFIGURATION
+server:
+  port: ${SERVER_PORT:8055} # Définit le port de ton application (8055 par défaut, au lieu du 8080 classique)
