@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.Filter;
 
 import java.time.LocalDate;
 
@@ -15,7 +16,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "stock_mvt")
+@Table(name = "stock_mvts")
+@Filter(name = "tenantFilter")
 public class StockMvt extends AbstractEntity{
 
     @Column(name = "type_mvt", nullable = false) // Colonne obligatoire

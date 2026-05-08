@@ -19,8 +19,8 @@ WITH (oids = false);
 CREATE UNIQUE INDEX category_name_unique_constraint ON public.categories USING btree (name);
 
 
-DROP TABLE IF EXISTS "product" CASCADE;
-CREATE TABLE "public"."product" (
+DROP TABLE IF EXISTS "products" CASCADE;
+CREATE TABLE "public"."products" (
     "id" character varying(255) NOT NULL,
     "created_at" timestamp(6) NOT NULL,
     "created_by" character varying(255) NOT NULL,
@@ -37,11 +37,11 @@ CREATE TABLE "public"."product" (
 )
 WITH (oids = false);
 
-CREATE UNIQUE INDEX product_reference_unique_constraint ON public.product USING btree (reference);
+CREATE UNIQUE INDEX product_reference_unique_constraint ON public.products USING btree (reference);
 
 
-DROP TABLE IF EXISTS "stock_mvt" CASCADE;
-CREATE TABLE "public"."stock_mvt" (
+DROP TABLE IF EXISTS "stock_mvts" CASCADE;
+CREATE TABLE "public"."stock_mvts" (
     "id" character varying(255) NOT NULL,
     "created_at" timestamp(6) NOT NULL,
     "created_by" character varying(255) NOT NULL,
@@ -62,12 +62,12 @@ WITH (oids = false);
 -- CONTRAINTES (Clés étrangères)
 ----------------------------------------------------------
 
-ALTER TABLE ONLY "public"."product"
+ALTER TABLE ONLY "public"."products"
     ADD CONSTRAINT "fk_category_id"
     FOREIGN KEY (category_id) REFERENCES categories(id) NOT DEFERRABLE;
 
-ALTER TABLE ONLY "public"."stock_mvt"
+ALTER TABLE ONLY "public"."stock_mvts"
     ADD CONSTRAINT "fk_product_id"
-    FOREIGN KEY (product_id) REFERENCES product(id) NOT DEFERRABLE;
+    FOREIGN KEY (product_id) REFERENCES products(id) NOT DEFERRABLE;
 
 -- 2026-04-26 09:02:04 UTC

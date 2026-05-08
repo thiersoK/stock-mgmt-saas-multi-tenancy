@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,7 @@ import java.util.Optional;
 @Service // Déclare cette classe comme un Bean de service Spring (Logique métier)
 @RequiredArgsConstructor // Lombok génère un constructeur avec les champs 'final' (Injection de dépendances)
 @Slf4j // Permet d'utiliser 'log' pour écrire des messages dans la console
+@Transactional
 public class CategoryServiceImpl implements CategoryService {
 
     // Dépendances injectées automatiquement via le constructeur de Lombok

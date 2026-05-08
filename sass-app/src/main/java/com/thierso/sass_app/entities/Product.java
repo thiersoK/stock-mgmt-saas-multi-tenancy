@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.Filter;
 
 // Import pour la précision monétaire (obligatoire pour les prix)
 import java.math.BigDecimal;
@@ -20,7 +21,8 @@ import java.util.List;
 @NoArgsConstructor // Génère un constructeur vide sans argument (requis par JPA/Hibernate)
 @SuperBuilder // Permet de construire des objets Product en incluant les champs hérités de AbstractEntity
 @Entity // Déclare cette classe comme une entité JPA qui sera mappée en base de données
-@Table(name = "product") // Précise le nom exact de la table dans la base PostgreSQL
+@Table(name = "products") // Précise le nom exact de la table dans la base PostgreSQL
+@Filter(name = "tenantFilter")
 public class Product extends AbstractEntity { // "extends" permet de récupérer l'ID, les dates d'audit et le soft delete
 
     // Définit la colonne 'name' ; elle est obligatoire (nullable = false)
