@@ -3,6 +3,7 @@ package com.thierso.sass_app.services.impl; // Emplacement du fichier
 // Importations des classes nécessaires (Entités, DTOs, Repositories, etc.)
 import com.thierso.sass_app.common.PageResponse;
 import com.thierso.sass_app.entities.Category;
+import com.thierso.sass_app.exceptions.DuplicateRessourceException;
 import com.thierso.sass_app.mapper.CategoryMapper;
 import com.thierso.sass_app.repositories.CategoryRepository;
 import com.thierso.sass_app.requests.CategoryRequest;
@@ -104,7 +105,8 @@ public class CategoryServiceImpl implements CategoryService {
         final Optional<Category> category = categoryRepository.findByNameIgnoreCase(categoryName);
         if (category.isPresent()) {
             log.debug("Category already exists");
-            throw new RuntimeException("Category already exists");
+            //throw new RuntimeException("Category already exists"); // we will use a custom exception later
+            throw new DuplicateRessourceException("Category already exists");
         }
     }
 }
